@@ -1,0 +1,22 @@
+meteor create playground
+cd playground
+meteor remove insecure
+meteor remove autopublish
+meteor add iron:router
+meteor add twbs:bootstrap
+meteor add underscore
+meteor add ian:accounts-ui-bootstrap-3
+meteor add accounts-password
+meteor add alanning:roles
+meteor add ejson
+meteor add dburles:google-maps
+meteor add sacha:spin
+meteor add froala:editor-reactive
+meteor add check
+meteor add aldeed:autoform
+meteor add universe:collection
+
+// for package: for edit, user has the role 'admin' and the project is taken from url http://xxx.com/projectname
+// for template: {{> readDocumentation}} and {{> writeDocumentation}}
+
+screen -s LC_ALL=en_US.UTF-8 meteor run

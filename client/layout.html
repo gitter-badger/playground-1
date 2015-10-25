@@ -1,0 +1,14 @@
+<head>
+  <title>Playground</title>
+</head>
+
+<template name="layout">
+  <div class="container">
+    {{> menu}}
+    {{> errors}}
+
+    <div id="home">
+      {{> yield}}
+    </div>
+  </div>
+</template>

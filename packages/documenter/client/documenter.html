@@ -1,0 +1,29 @@
+<!-- template for use in a project - to read the documentation -->
+<template name="readDocumentation">
+  <a id="readDocumentation" href="">Behind the scenes!</a>
+</template>
+
+<!-- template for use in a project - to write the documentation -->
+<template name="writeDocumentation">
+  <a id="writeDocumentation" href="">Document this!</a>
+</template>
+
+<!-- the following templates are used if the buttons are clicked -->
+<template name="documentation">
+  {{> documentationHeader}}
+  {{{description}}}
+</template>
+
+<template name="documentationEdit">
+  {{> documentationHeader}}
+  <form>
+    {{> froalaReactive _value=this.description}}
+    <input type="submit" value="Submit" class="btn btn-primary submit"/>
+  </form>
+</template>
+
+<template name="documentationHeader">
+  <div class="jumbotron">
+    <h1>Documentation for {{project}}</h1>
+  </div>
+</template>

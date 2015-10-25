@@ -1,0 +1,8 @@
+<template name="settings">
+  {{#autoForm collection="SharePoints" id="updateSharepointForm" type="update" resetOnSuccess="false" autosave="true"}}
+    <fieldset>
+      {{> afQuickField name='items'}}
+    </fieldset>
+    <button type="submit" class="btn btn-primary">Insert</button>
+  {{/autoForm}}
+</template>
