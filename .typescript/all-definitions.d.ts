@@ -3,6 +3,13 @@
  * Any typescript files only need to contain a reference at the top of the file to this file.
  */
 
+/***
+ * These are my private definitions files just for me
+ */
+/// <reference path="uniCollection.d.ts" />
+/// <reference path="simple-schema.d.ts" />
+/// <reference path="googleMaps.d.ts" />
+
 /**
  * These are references to definition files that are maintained solely for Meteor
  */
