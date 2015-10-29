@@ -154,8 +154,8 @@ class Shoogle {
   };
 };
 
-var shoogle: Shoogle;
-
+declare var shoogle:Shoogle;
+shoogle: Shoogle;
 
 SharePoints.find().observe({
   added: function (doc) {
@@ -194,7 +194,7 @@ Template['shoogle'].onCreated(function() {
           shoogle.updateOwnMarkers(shoogle.ownId);
 
           // can click on the map
-          google.maps.event.addListener(map, 'click', function(event) {
+          google.maps.event.addListener(map.instance, 'click', function(event) {
             SharePoints.insert({ owner: shoogle.ownId, latitude: event.latLng.lat(), longitude: event.latLng.lng() });
           });
         }
@@ -244,7 +244,7 @@ Template['shoogle'].events({
   "click .rename": function (event) {
     var node = $(event.target.parentNode).find('.itemname');
     var name = node.html();
-    node.html('<form class="form-inline"><input type="text" id="' + this._id + '" value="Home" class="form-control" /><div class="btn btn-default" onclick="shoogle.saveName(\'' + this._id + '\')">Save</div></form>');
+    node.html('<form class="form-inline"><input type="text" id="' + this._id + '" value="Home" class="form-control" /><div class="btn btn-default" onclick="Shoogle.prototype.saveName(\'' + this._id + '\')">Save</div></form>');
     console.log("rename");
   },
 
