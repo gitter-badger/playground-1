@@ -1,6 +1,6 @@
 /// <reference path="google.maps.d.ts" />
 
-declare interface googleMap {
+interface googleMap {
 	instance: google.maps.Map;
 	options: google.maps.MapOptions;
 }
